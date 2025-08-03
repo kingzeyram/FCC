@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Landing Page</title>
+    <style>
+      html {
+        display: block;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #header div {
+        display: flex;
+        align-items: center;
+      }
+
+      #header-img {
+        height: 50px;
+        width: 60px;
+      }
+
+      #nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #nav-bar ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav-bar a {
+        color: white;
+        text-decoration: none;
+      }
+
+      #nav-bar a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        margin-top: 60px;
+        padding: 20px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 300px;
+      }
+
+      section {
+        margin: 20px 0;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      form input {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 80%;
+        max-width: 400px;
+      }
+
+      @media (max-width: 650px) {
+        #nav-bar ul {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        iframe {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div>
+        <img
+          id="header-img"
+          src="https://img.freepik.com/free-vector/gradient-colored-cobra-logo-template_23-2149192539.jpg?t=st=1738046191~exp=1738049791~hmac=bd25d279bb51f1ebdb20b1805f1a5b26c6fe2a90346e2b281ca40fe48296d1cd&w=740"
+        />
+      </div>
+      <nav id="nav-bar">
+        <ul>
+          <li><a class="nav-link" href="#standard">Standard</a></li>
+          <li><a class="nav-link" href="#regular">Regular</a></li>
+          <li><a class="nav-link" href="#premium">Premium</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="standard">
+        <h2>Standard</h2>
+        <p>
+          Unlimited ad-free movies, TV shows, and mobile games Watch on 1 supported device at a time
+          Watch in 720p (HD) Download on 1 supported device at a time
+        </p>
+      </section>
+      <section id="regular">
+        <h2>Regular</h2>
+        <p>
+          Unlimited ad-free movies, TV shows, and mobile games Watch on 2 supported devices at a time
+          Watch in 1080p (Full HD) Download on 2 supported devices at a time
+        </p>
+      </section>
+      <section id="premium">
+        <h2>Premium</h2>
+        <p>
+          Unlimited ad-free movies, TV shows, and mobile games Watch on 4 supported devices at a time
+          Watch in 4K (Ultra HD) + HDR Download on 6 supported devices at a time Netflix spatial audio
+        </p>
+      </section>
+      <iframe
+        id="video"
+        src="https://www.youtube.com/embed/BOBS4eEAAVs?rel=0&controls=0&showinfo=0"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+        <input id="email" type="email" name="email" placeholder="Enter your email" required />
+        <input type="submit" value="Submit" id="submit" />
+      </form>
+    </main>
+  </body>
+</html>

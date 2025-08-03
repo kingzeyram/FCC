@@ -1,0 +1,28 @@
+a:hover{
+    color:green;
+  }
+  #welcome-section {
+    height: 100vh;
+    
+  }
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white; /* Optional */
+    z-index: 1000; /* Ensures it's above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+  @media (max-width: 768px) {
+    .welcome-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .navbar {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
